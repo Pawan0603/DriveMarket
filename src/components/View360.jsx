@@ -43,6 +43,14 @@ export default function View360({ images = [], isOpen, onClose }) {
     setIsDragging(false);
   };
 
+  useEffect(() => {  // Preload images for smoother transitions in 360 view
+    images.forEach((src) => {
+      const img = new window.Image();
+      img.src = src;
+    });
+  }, [images]);
+
+
   if (!isOpen) return null;
 
   return (
@@ -88,7 +96,22 @@ export default function View360({ images = [], isOpen, onClose }) {
           onTouchMove={(e) => dragMove(e.touches[0].clientX)}
           onTouchEnd={endDrag}
         >
-          <motion.div
+          <div
+            key={currentImageIndex}
+            className="relative w-full h-full flex items-center justify-center p-4 sm:p-8"
+          >
+            <div className="relative max-w-full max-h-full w-auto h-auto">
+             <Image
+                src={images[currentImageIndex]}
+                alt={`360 view ${currentImageIndex + 1}`}
+                width={1200}
+                height={800}
+                draggable={false}
+                className="object-contain pointer-events-none"
+              />
+            </div>
+          </div>
+          {/* <motion.div
             key={currentImageIndex}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -105,7 +128,7 @@ export default function View360({ images = [], isOpen, onClose }) {
                 className="object-contain pointer-events-none"
               />
             </div>
-          </motion.div>
+          </motion.div> */}
         </div>
 
         {/* Footer Indicator */}
@@ -120,11 +143,10 @@ export default function View360({ images = [], isOpen, onClose }) {
                 <button
                   key={idx}
                   onClick={() => setCurrentImageIndex(idx)}
-                  className={`h-1.5 sm:h-2 rounded-full transition-all ${
-                    idx === currentImageIndex
-                      ? "w-8 sm:w-12 bg-accent"
-                      : "w-1.5 sm:w-2 bg-muted hover:bg-muted-foreground/60"
-                  }`}
+                  className={`h-1.5 sm:h-2 rounded-full transition-all ${idx === currentImageIndex
+                    ? "w-8 sm:w-12 bg-accent"
+                    : "w-1.5 sm:w-2 bg-muted hover:bg-muted-foreground/60"
+                    }`}
                 />
               ))}
             </div>

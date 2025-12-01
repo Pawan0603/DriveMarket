@@ -68,7 +68,8 @@ export default function EMICalculator({ carPrice }) {
               <path
                 d="M 20 100 A 80 80 0 0 1 180 100"
                 fill="none"
-                stroke="hsl(var(--muted))"
+                // stroke="hsl(var(--muted))"
+                stroke="#e5e5e5"
                 strokeWidth="20"
                 strokeLinecap="round"
               />
@@ -77,7 +78,8 @@ export default function EMICalculator({ carPrice }) {
               <path
                 d="M 20 100 A 80 80 0 0 1 180 100"
                 fill="none"
-                stroke="hsl(var(--accent))"
+                // stroke="hsl(var(--accent))"
+                stroke="#fb923c"
                 strokeWidth="20"
                 strokeLinecap="round"
                 strokeDasharray={`${
