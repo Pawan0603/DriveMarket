@@ -30,12 +30,12 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-heading font-bold text-white mb-6 leading-tight">
+            <h1 className="text-3xl md:text-5xl sm:text-6xl lg:text-7xl font-heading font-bold text-white mb-6 leading-tight">
               Find Your Perfect
               <span className="block text-orange-500">Second-Hand Car</span>
             </h1>
 
-            <p className="text-xl sm:text-2xl text-white/90 mb-8 leading-relaxed">
+            <p className="text-[18px] md:text-xl sm:text-2xl text-white/90 mb-8 leading-relaxed">
               Browse thousands of quality pre-owned vehicles or sell your car with ease. 
               Trusted by over 50,000 happy customers.
             </p>

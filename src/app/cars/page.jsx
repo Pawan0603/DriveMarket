@@ -22,10 +22,10 @@ export default function CarListings() {
             transition={{ duration: 0.6 }}
             className="mb-12"
           >
-            <h1 className="text-4xl sm:text-5xl font-heading font-bold text-primary mb-4">
+            <h1 className="text-[28px] md:text-4xl sm:text-5xl font-heading font-bold text-primary mb-4">
               Browse Our Collection
             </h1>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-[18px] md:text-xl sm:text-2xl text-muted-foreground">
               Find your perfect second-hand car from our verified listings
             </p>
           </motion.div>

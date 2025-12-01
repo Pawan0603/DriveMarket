@@ -113,7 +113,7 @@ export default function CarDetail() {
                     {car.view360Images && (
                       <Button
                         size="sm"
-                        className="absolute bottom-4 right-4 bg-orange-500 hover:bg-orange-500/90 text-orange-foreground opacity-0 group-hover:opacity-100 transition-opacity"
+                        className="absolute bottom-4 right-4 bg-orange-500 hover:bg-orange-500/90 text-orange-foreground opacity-50 md:opacity-0 group-hover:opacity-100 transition-opacity"
                         onClick={() => setIs360ViewOpen(true)}
                       >
                         <ViewIcon className="h-4 w-4 mr-2" />

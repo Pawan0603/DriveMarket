@@ -37,10 +37,10 @@ export default function HowItWorks() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl font-heading font-bold text-primary mb-4">
+          <h2 className="text-[27px] md:text-4xl sm:text-5xl font-heading font-bold text-primary mb-4">
             How It Works
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-[18px] md:text-xl sm:text-2xl text-muted-foreground max-w-2xl mx-auto">
             Get started in three simple steps and find your dream car today.
           </p>
         </motion.div>

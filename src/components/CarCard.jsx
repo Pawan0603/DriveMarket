@@ -48,10 +48,10 @@ export default function CarCard({ car, index = 0 }) {
           <div className="p-6">
             {/* Title + Price */}
             <div className="mb-3">
-              <h3 className="text-2xl font-heading font-bold text-primary mb-1 group-hover:text-orange-500 transition-colors">
+              <h3 className="text-[18px] md:text-2xl font-heading font-bold text-primary mb-1 group-hover:text-orange-500 transition-colors">
                 {car.year} {car.make} {car.model}
               </h3>
-              <p className="text-3xl font-heading font-bold text-orange-500">
+              <p className="text-[25px] md:text-3xl font-heading font-bold text-orange-500">
                 ₹{car.price.toLocaleString('en-IN')}
               </p>
             </div>
